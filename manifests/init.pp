@@ -51,7 +51,7 @@ class rhevagent (
   service { 'ovirt-guest-agent':
     ensure => $rhev_agent_ensure,
     enable => true,
-    require => Package['rhevm-guest-agent'],
+    require => Package['rhevm-guest-agent'] or Package['rhev-guest-agent-common'],
   }
 
 }
