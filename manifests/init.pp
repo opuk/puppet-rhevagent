@@ -36,6 +36,25 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class rhevagent {
+ 
+  if $::operatingsystemmajrelease < 7 {
+    package { 'rhev-agent':
+      ensure => installed,
+    } 
+    service { 'rhev-agentd':
+      ensure => running,
+      enable => true,
+    }
+  } else {
+    package { 'rhevm-guest-agent-common':
+      ensure => installed,
+    }
+    service { 'ovirt-guest-agent':
+      ensure => running,
+      enable => true,
+    }
+  }
+
 
 
 }
