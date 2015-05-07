@@ -35,13 +35,21 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class rhevagent {
+class rhevagent (
+  $rhev_agent_ensure = 'running',
+) {
 
-  package { 'rhevm-guest-agent':
-    ensure => installed,
+  if $::operatingsystemmajrelease >= 7 {
+    package { 'rhevm-guest-agent':
+      ensure => installed,
+    }
+  } else {
+    package { 'rhevm-guest-agent':
+      ensure => installed,
+    }
   }
   service { 'ovirt-guest-agent':
-    ensure => running,
+    ensure => $rhev_agent_ensure,
     enable => true,
     require => Package['rhevm-guest-agent'],
   }
