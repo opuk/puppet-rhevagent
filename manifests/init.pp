@@ -43,15 +43,20 @@ class rhevagent (
     package { 'rhevm-guest-agent-common':
       ensure => installed,
     }
+    service { 'ovirt-guest-agent':
+      ensure => $rhev_agent_ensure,
+      enable => true,
+      require => Package['rhevm-guest-agent-common'],
+    }
   } else {
     package { 'rhevm-guest-agent':
       ensure => installed,
     }
-  }
-  service { 'ovirt-guest-agent':
-    ensure => $rhev_agent_ensure,
-    enable => true,
-    require => Package['rhevm-guest-agent'] or Package['rhevm-guest-agent-common'],
+   service { 'ovirt-guest-agent':
+      ensure => $rhev_agent_ensure,
+      enable => true,
+      require => Package['rhevm-guest-agent'],
+    }
   }
 
 }
