@@ -1,0 +1,17 @@
+{
+  "name": "opuk-rhevagent",
+  "version": "0.0.1",
+  "author": "opuk",
+  "summary": "Installs and enabled RHEV agent",
+  "license": "Apache 2.0",
+  "source": "https://github.com/opuk/puppet-rhevagent",
+  "project_page": "https://github.com/opuk/puppet-rhevagent",
+  "issues_url": "https://github.com/opuk/puppet-rhevagent/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+
