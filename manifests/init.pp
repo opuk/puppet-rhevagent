@@ -39,7 +39,7 @@ class rhevagent (
   $rhev_agent_ensure = 'running',
 ) {
 
-  if $::operatingsystemmajrelease >= 7 {
+  if $::operatingsystemrelease >= 7 {
     package { 'rhevm-guest-agent-common':
       ensure => installed,
     }
