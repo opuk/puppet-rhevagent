@@ -1,6 +1,6 @@
 # == Class: rhevagent
 #
-# Full description of class rhevagent here.
+# This module installs and enables the RHEV agent.
 #
 # === Parameters
 #
@@ -14,26 +14,16 @@
 #
 # Here you should define a list of variables that this module would require.
 #
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
-#
-# === Examples
-#
-#  class { rhevagent:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+# [*rhev_agent_ensure*]
+#   Ensure the agent is running or not.
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Johan Swensson <kupo@kupo.se>
 #
 # === Copyright
 #
-# Copyright 2015 Your name here, unless otherwise noted.
+# Copyright 2015 Johan Swensson, unless otherwise noted.
 #
 class rhevagent (
   $rhev_agent_ensure = 'running',
