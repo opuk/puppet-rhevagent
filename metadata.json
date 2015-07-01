@@ -2,7 +2,7 @@
   "name": "opuk-rhevagent",
   "version": "0.0.6",
   "author": "opuk",
-  "summary": "Installs and enabled RHEV agent",
+  "summary": "Installs and enables RHEV agent",
   "license": "Apache 2.0",
   "source": "https://github.com/opuk/puppet-rhevagent",
   "project_page": "https://github.com/opuk/puppet-rhevagent",
