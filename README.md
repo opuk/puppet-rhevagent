@@ -6,4 +6,4 @@
 
 ## Overview
 
-This is a experimental module and should be treated as such.
+This module installs and enables the RHEV agent.
