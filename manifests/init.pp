@@ -34,7 +34,7 @@ class rhevagent (
       enabled => true,
     }
     package { 'rhevm-guest-agent-common':
-      ensure => installed,
+      ensure  => installed,
       require => Yumrepo['rhel-7-server-rh-common-rpms']
     }
     service { 'ovirt-guest-agent':
