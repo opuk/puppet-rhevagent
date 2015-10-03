@@ -32,7 +32,6 @@ class rhevagent (
   if $::operatingsystemrelease >= 7 {
     package { 'rhevm-guest-agent-common':
       ensure  => installed,
-      require => Yumrepo['rhel-7-server-rh-common-rpms']
     }
     service { 'ovirt-guest-agent':
       ensure  => $rhev_agent_ensure,
