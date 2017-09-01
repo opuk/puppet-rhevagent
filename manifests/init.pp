@@ -30,13 +30,13 @@ class rhevagent (
 ) {
 
   if $::operatingsystemrelease >= 7 {
-    package { 'rhevm-guest-agent-common':
+    package { 'ovirt-guest-agent-common':
       ensure  => installed,
     }
     service { 'ovirt-guest-agent':
       ensure  => $rhev_agent_ensure,
       enable  => true,
-      require => Package['rhevm-guest-agent-common'],
+      require => Package['ovirt-guest-agent-common'],
     }
   } else {
     package { 'rhevm-guest-agent':
