@@ -1,6 +1,6 @@
 {
   "name": "opuk-rhevagent",
-  "version": "0.0.11",
+  "version": "0.1.1",
   "author": "opuk",
   "summary": "Installs and enables RHEV agent",
   "license": "Apache-2.0",

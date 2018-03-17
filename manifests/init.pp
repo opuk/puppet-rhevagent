@@ -29,7 +29,7 @@ class rhevagent (
   $rhev_agent_ensure = 'running',
 ) {
 
-  if $::operatingsystemrelease >= 7 {
+  if $::operatingsystemrelease >= "7" {
     package { 'ovirt-guest-agent-common':
       ensure  => installed,
     }
